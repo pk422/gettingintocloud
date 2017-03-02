@@ -1,4 +1,32 @@
-<h1>
-  {{title}}
-</h1>
+<div class="navbar navbar-default ">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">A Cloud Source</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            
+            <li>
+              <a href="#">Help</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="login" >Login / Sign up</a></li>
+            <li><a routerLink="newpost" >Write a Post</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
 <router-outlet></router-outlet>

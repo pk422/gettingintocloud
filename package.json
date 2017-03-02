@@ -24,6 +24,7 @@
     "body-parser": "^1.16.0",
     "core-js": "^2.4.1",
     "express": "^4.14.1",
+    "mysql": "^2.13.0",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2"
@@ -34,6 +35,8 @@
     "@types/node": "^6.0.42",
     "angular-cli": "1.0.0-beta.28.3",
     "codelyzer": "~2.0.0-beta.1",
+    "grunt": "^1.0.1",
+    "grunt-ts": "^6.0.0-beta.11",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
@@ -44,6 +47,6 @@
     "protractor": "~4.0.13",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
-    "typescript": "~2.0.3"
+    "typescript": "^2.1.10"
   }
 }

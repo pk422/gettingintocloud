@@ -1,26 +1,17 @@
 const express = require('express');
+const fs = require('fs');
 const router = express.Router();
 
+const mysql = require('mysql');
 const axios = require('axios');
 const API = 'https://jsonplaceholder.typicode.com';
+const connectionString = process.env.SQL_CONNECTION | "";
 
-router.get('/posts',(req,res)=>{
+var mysqlRouter = require('./mysqlRoutes.ts');
+var loginRouter = require('./login.ts');
 
-axios.get('https://jsonplaceholder.typicode.com/posts')
-.then(posts=>  {
-    res.status(200).json(posts.data);
-})
-.catch(error =>{
-res.status(500).error(error);
-});
-
-
-
-});
-
-/* GET api listing. */
-router.get('/', (req, res) => {
-  res.send('api works');
-});
+router.use('/posts',mysqlRouter);
+router.use('/comments',mysqlRouter);
+router.use('/authenticate',loginRouter);
 
 module.exports = router;
